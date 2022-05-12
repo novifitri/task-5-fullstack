@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+    //relasi ke user
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+     //relasi ke category
+     public function category()
+     {
+         return $this->belongsTo(Category::class);
+     }
 }
