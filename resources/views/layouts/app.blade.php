@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Novi Fitri">
 
-    <title>My Articles</title>
+    <title> @yield('title') | My Blog</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('admin-2/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -48,9 +48,10 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
+                        @yield('create-button')
                     </div>
+                    @yield('content')
                 </div>
-                @yield('content')
                 <!-- /.container-fluid -->
 
             </div>
@@ -60,7 +61,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; My Blog 2022</span>
                     </div>
                 </div>
             </footer>

@@ -19,6 +19,7 @@ use App\Http\Controllers\CategoryController;
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('myarticles', [ArticleController::class, 'myIndex'])->name('myarticles');
 Route::resource('articles', ArticleController::class);
 Route::resource('categories', CategoryController::class);
 

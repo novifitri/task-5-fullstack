@@ -38,9 +38,15 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Categories</span></a>
     </li>
-    <!-- Nav Item - Categories -->
+    <!-- Nav Item - All Articles -->
     <li class="nav-item {{Request::is('articles')? 'active' : ''}}">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link " href="{{route('articles.index')}}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>All Articles</span></a>
+    </li>
+    <!-- Nav Item - My Articles -->
+    <li class="nav-item {{Request::is('myarticles')? 'active' : ''}}">
+        <a class="nav-link" href="{{route('myarticles')}}">
             <i class="fas fa-file-alt "></i>
             <span>My Articles</span></a>
     </li>

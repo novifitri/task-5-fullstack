@@ -16,8 +16,13 @@ class ArticleFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->title(),
-            'content' => $this->faker->text(),
+            'title' => $this->faker->sentence(),
+            // 'content' => '<p>'. implode('</p><p>',$this->faker->paragraphs(mt_rand(2,5))).'</p>',
+            'content' => collect($this->faker->paragraphs(mt_rand(2,5)))
+                        ->map(function ($p) {
+                            return "<p>$p</p>";
+                        })
+                        ->implode(''),
             'image' => $this->faker->imageUrl(200,200),
             'user_id' => User::factory(),
             'category_id' => Category::factory(),
