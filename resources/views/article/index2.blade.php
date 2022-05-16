@@ -5,7 +5,9 @@
 @endsection
 
 @section('create-button')
+@auth
 <a href="{{route('articles.create')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Create New Article<i class="fas fa-plus ml-2"></i></a>
+@endauth
 @endsection
 
 @section('content')
